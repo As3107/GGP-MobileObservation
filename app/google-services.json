@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "795994968190",
+    "project_id": "ai-ggp-mobile",
+    "storage_bucket": "ai-ggp-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795994968190:android:55b4e13071b50e56db082f",
+        "android_client_info": {
+          "package_name": "com.ggp.ai_ggpmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795994968190-but0ad01r52u47llmr1g0378fqamugl9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNOlA9V8_0So24wuVMZNU6HLzfnysKtc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795994968190-but0ad01r52u47llmr1g0378fqamugl9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

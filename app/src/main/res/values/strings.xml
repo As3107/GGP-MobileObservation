@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">AI-GGP Mobile</string>
+    <string name="splash">QC Apps</string>
+    <string name="logout">Logout</string>
+    <string name="data_null">Data Kosong</string>
+    <string name="ggf_story">Great Giant Foods (GGF) is the brand entity of Gunung Sewu Group for a leading vertically
+                    integrated food player that cultivates, manufactures, delivers fresh and processed fruits, juice, meat, and dairy.
+                    Each of GGF’s business units has been established with the principle of sustainable integrated farming.
+                    These allow the organization to have complete oversee across our entire supply chain.
+    </string>
+    <string name="number">1234</string>
+    <string name="message_agree_kasie">Apakah Anda yakin semua data sudah BENAR ?</string>
+    <string name="message_disagree_kasie">Apakah Anda TIDAK SETUJU dan ingin mengembalikan data ke MANDOR yang bersangkutan ?</string>
+    <string name="message_agree_mandor">Apakah Anda yakin semua data sudah BENAR dan meneruskan data ke KASIE ?</string>
+    <string name="message_disagree_mandor">Apakah Anda TIDAK SETUJU dan ingin mengembalikan data ke TK yang bersangkutan ?</string>
+
+    <!--LOGIN-->
+    <string name="content_description">Content Description</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Lupa Password ?</string>
+    <string name="login">Login</string>
+
+    <!--MENU TK-->
+    <string name="tk">TK</string>
+    <string name="chopper">Chopper</string>
+    <string name="welcome">Selamat Datang</string>
+    <string name="name">Agung Pambudi</string>
+    <string name="set_location">Pilih Lokasi</string>
+    <string name="observation_list">Pengamatan Hari Ini</string>
+    <string name="title_edit_chopper">Edit Data Chopper</string>
+
+    <!--MENU MANDOR-->
+    <string name="mandor">Mandor</string>
+    <string name="agree">Setuju</string>
+    <string name="disagree">Tidak Setuju</string>
+    <string name="title_list_data">List Data</string>
+    <string name="spk_id">SPK ID</string>
+    <string name="observational_input">Input Pengamatan</string>
+    <string name="title_no_spk">No SPK</string>
+    <string name="title_location">Lokasi</string>
+    <string name="title_district">Wilayah</string>
+    <string name="title_observation">Pengamatan</string>
+    <string name="title_chose_tk">Pilih TK</string>
+    <string name="create_spk">Buat SPK</string>
+    <string name="list_spk">Daftar SPK</string>
+    <string name="date">Tanggal</string>
+    <string name="notes">Catatan</string>
+    <string name="notes_tk">Catatan TK</string>
+    <string name="notes_mandor">Catatan Mandor</string>
+    <string name="notes_kasie">Catatan Kasie</string>
+    <string name="detail_spk">Detail SPK</string>
+    <string name="rataan">Rataan</string>
+
+    <!--MENU KASIE-->
+    <string name="kasie">Kasie</string>
+
+    <string name="pengamat">Pengamat</string>
+    <string name="plot">Plot</string>
+    <string name="bt">BT</string>
+    <string name="th">TH</string>
+    <string name="ar">AR</string>
+    <string name="save">Save</string>
+    <string name="send">Send</string>
+    <string name="total">Total</string>
+    <string name="mean">Rata-rata</string>
+    <string name="total_sample">Total Sampel</string>
+
+    <string-array name="list_observation">
+        <item>Pilih Pengamatan</item>
+        <item>Chopper</item>
+        <item>Ridger</item>
+        <item>Jalan dan Saluran</item>
+        <item>Bajak</item>
+        <item>Fin Harrow</item>
+        <item>Subsoil</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipe_refresh"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeMandorActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <com.github.florent37.shapeofview.shapes.ArcView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shape_arc_height="40dp"
+                app:shape_arc_position="bottom">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#b8de6f" />
+
+            </com.github.florent37.shapeofview.shapes.ArcView>
+
+            <ImageView
+                android:id="@+id/iv_ggf"
+                android:contentDescription="@string/content_description"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ggf_logo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_title_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="@id/iv_ggf"
+                app:layout_constraintLeft_toRightOf="@id/iv_ggf"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/name"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_welcome"
+                app:layout_constraintLeft_toLeftOf="@id/tv_title_welcome"/>
+
+            <TextView
+                android:id="@+id/tv_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mandor"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                app:layout_constraintLeft_toLeftOf="@id/tv_name"/>
+
+            <ImageView
+                android:id="@+id/iv_logout"
+                android:contentDescription="@string/content_description"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_exit"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_position"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/cv_disagree">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_title_agree"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/agree"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/iv_agree"
+                        android:contentDescription="@string/content_description"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/ic_agree"
+                        app:layout_constraintTop_toTopOf="@id/tv_total_agree"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_total_agree"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tv_total_agree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_title_agree"
+                        app:layout_constraintBottom_toTopOf="@+id/view0"
+                        app:layout_constraintLeft_toRightOf="@id/iv_agree"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <View
+                        android:id="@+id/view0"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:background="#184d47"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/iv_agree"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_disagree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintTop_toTopOf="@id/cv_agree"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/cv_agree">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_title_disagree"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/disagree"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/iv_disagree"
+                        android:contentDescription="@string/content_description"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/ic_cancel"
+                        app:layout_constraintTop_toTopOf="@id/tv_total_disagree"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_total_disagree"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tv_total_disagree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_title_disagree"
+                        app:layout_constraintBottom_toTopOf="@+id/view1"
+                        app:layout_constraintLeft_toRightOf="@id/iv_disagree"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:background="#ff577f"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/iv_disagree"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_create_spk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintTop_toBottomOf="@id/cv_disagree"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/cv_list_spk">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_create_spk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/create_spk"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/iv_create_spk"
+                        android:contentDescription="@string/content_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:src="@drawable/ic_create_spk"
+                        app:layout_constraintTop_toBottomOf="@id/tv_create_spk"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:background="#184d47"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/iv_create_spk"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="@id/iv_create_spk"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_list_spk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintTop_toBottomOf="@id/cv_disagree"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/cv_create_spk">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_list_spk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/list_spk"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/iv_list_spk"
+                        android:contentDescription="@string/content_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:src="@drawable/ic_list_spk"
+                        app:layout_constraintTop_toBottomOf="@id/tv_list_spk"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <View
+                        android:id="@+id/view01"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:background="#184d47"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/iv_list_spk"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="@id/iv_list_spk"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_list_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintTop_toBottomOf="@id/cv_create_spk"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_title_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_list_data"
+                        android:layout_margin="5dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_margin="5dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintTop_toBottomOf="@id/tv_title_list"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:visibility="gone"
+                        android:id="@+id/rv_list_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/view2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        tools:listitem="@layout/item_list_data"
+                        tools:itemCount="10"/>
+
+                    <TextView
+                        android:visibility="visible"
+                        android:id="@+id/tv_data_null"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/data_null"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/view2"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_list_disagree"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cv_list_data">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_title_list01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/disagree"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view001"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_margin="5dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_title_list01" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_list_data01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view001"
+                        tools:itemCount="10"
+                        tools:listitem="@layout/item_list_data" />
+
+                    <TextView
+                        android:id="@+id/tv_data_null01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/data_null"
+                        android:textSize="20sp"
+                        android:visibility="visible"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view001" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:id="@+id/view_null"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cv_list_disagree"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

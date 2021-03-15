@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ObservationalInputActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/observational_input"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15sp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintTop_toTopOf="@id/iv_ggf"
+        app:layout_constraintBottom_toBottomOf="@id/iv_ggf"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_ggf"
+        android:contentDescription="@string/content_description"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ggf_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_ggf"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tv_title_no_spk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/title_no_spk"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/et_no_spk"
+                app:layout_constraintHorizontal_weight="0.4"
+                app:drawableEndCompat="@drawable/ic_equal"/>
+
+            <EditText
+                android:id="@+id/et_no_spk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:inputType="textMultiLine|phone"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:autofillHints="@string/title_no_spk"
+                android:background="@drawable/bg_edit_text"
+                android:layout_marginStart="8dp"
+                android:padding="3dp"
+                app:layout_constraintTop_toTopOf="@id/tv_title_no_spk"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_title_no_spk"
+                app:layout_constraintHorizontal_weight="0.6"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/tv_title_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/et_no_spk"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_date"
+                app:layout_constraintHorizontal_weight="0.4"
+                app:drawableEndCompat="@drawable/ic_equal"/>
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_edit_text"
+                android:padding="3dp"
+                app:layout_constraintTop_toTopOf="@id/tv_title_date"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_title_date"
+                app:layout_constraintHorizontal_weight="0.6"/>
+
+            <TextView
+                android:id="@+id/tv_title_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/title_location"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_date"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/et_location"
+                app:layout_constraintHorizontal_weight="0.4"
+                app:drawableEndCompat="@drawable/ic_equal"/>
+
+            <EditText
+                android:id="@+id/et_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:autofillHints="@string/title_location"
+                android:background="@drawable/bg_edit_text"
+                android:layout_marginStart="8dp"
+                android:padding="3dp"
+                app:layout_constraintTop_toTopOf="@id/tv_title_location"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_title_location"
+                app:layout_constraintHorizontal_weight="0.6"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/tv_title_region"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/title_district"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/et_location"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/et_region"
+                app:layout_constraintHorizontal_weight="0.4"
+                app:drawableEndCompat="@drawable/ic_equal"/>
+
+            <EditText
+                android:id="@+id/et_region"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:autofillHints="@string/title_district"
+                android:background="@drawable/bg_edit_text"
+                android:layout_marginStart="8dp"
+                android:padding="3dp"
+                app:layout_constraintTop_toTopOf="@id/tv_title_region"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_title_region"
+                app:layout_constraintHorizontal_weight="0.6"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/tv_title_observation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/title_observation"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/et_region"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/sp_observation"
+                app:layout_constraintHorizontal_weight="0.4"
+                app:drawableEndCompat="@drawable/ic_equal"/>
+
+            <Spinner
+                android:id="@+id/sp_observation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:entries="@array/list_observation"
+                app:layout_constraintTop_toTopOf="@id/tv_title_observation"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_title_observation"
+                app:layout_constraintHorizontal_weight="0.6"
+                android:layout_marginStart="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_title_tk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/title_chose_tk"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_observation"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_chose_tk"
+                app:layout_constraintHorizontal_weight="0.4"
+                app:drawableEndCompat="@drawable/ic_equal"/>
+
+            <TextView
+                android:id="@+id/tv_chose_tk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/title_chose_tk"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_edit_text"
+                android:padding="3dp"
+                app:layout_constraintTop_toTopOf="@id/tv_title_tk"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_title_tk"
+                app:layout_constraintHorizontal_weight="0.6"
+                app:drawableEndCompat="@drawable/ic_arrow_right"
+                tools:ignore="RtlSymmetry" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button"
+                android:text="@string/send"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tv_chose_tk"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tv_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/bt_send"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
